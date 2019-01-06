@@ -4,6 +4,7 @@ prod:
 server:
   port: 8751
 
+# 访问config需要的配置
 eureka:
   client:
     service-url:
@@ -16,11 +17,13 @@ spring:
     active: dev
   rabbitmq:
     host: ${prod.host}
-    port: 15672
+    port: 5672
   cloud:
     config:
       discovery:
         enabled: true
         service-id: config
-      profile: master
+      profile: dev
       label: master
+      username: user
+      password: 123456
