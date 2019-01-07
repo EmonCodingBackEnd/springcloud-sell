@@ -43,11 +43,11 @@ public class ClientController {
     }
 
     @GetMapping("/getProductList")
-    public String getProductList() {
+    public List<ProductInfoOutput> getProductList() {
         List<ProductInfoOutput> productInfoOutputList =
                 productClient.listForOrder(Arrays.asList("10000001", "10000002"));
         log.info("response={}", productInfoOutputList);
-        return "ok";
+        return productInfoOutputList;
     }
 
     @GetMapping("/productDecreaseStock")
