@@ -46,7 +46,7 @@
 
         <dependency>
             <groupId>com.coding</groupId>
-            <artifactId>product-common</artifactId>
+            <artifactId>product-client</artifactId>
         </dependency>
 
         <dependency>

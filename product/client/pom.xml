@@ -26,6 +26,11 @@
             <groupId>com.coding</groupId>
             <artifactId>product-common</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.ishanshan</groupId>
+            <artifactId>ss-gateway-common</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
