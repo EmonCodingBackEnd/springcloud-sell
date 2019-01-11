@@ -20,4 +20,6 @@ import lombok.EqualsAndHashCode;
 @Data
 public class AuthSessionRequest extends AuthRequest<AuthSessionResponse> {
     private static final long serialVersionUID = -6291170404443079363L;
+
+    private String extraParam;
 }
