@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/product/V1.0")
 public class ProductController {
 
     @Autowired private ProductService productService;
