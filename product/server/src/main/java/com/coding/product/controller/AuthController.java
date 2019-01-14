@@ -34,7 +34,7 @@ public class AuthController {
             response.setErrorCode(191919);
         } else {
             AuthDetail authDetail = new AuthDetail();
-            authDetail.setUsername("9000107");
+            authDetail.setUserId("9000107");
             response.setAuthDetail(authDetail);
         }
         return response;
@@ -44,9 +44,11 @@ public class AuthController {
     public AuthSessionResponse login(@RequestBody AuthSessionRequest request) {
         AuthSessionResponse response = new AuthSessionResponse();
 
-        String username = request.getAuthDetail().getUsername();
-        AuthDetail authDetail = request.getAuthDetail();
+        //        String username = request.getAuthDetail().getUserId();
+        AuthDetail authDetail = new AuthDetail();
+        authDetail.setUserId(request.getUserId());
         response.setOtherInfo("其他信息");
+        response.setAuthDetail(authDetail);
 
         return response;
     }
