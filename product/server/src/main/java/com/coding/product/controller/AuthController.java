@@ -44,12 +44,13 @@ public class AuthController {
     public AuthSessionResponse login(@RequestBody AuthSessionRequest request) {
         AuthSessionResponse response = new AuthSessionResponse();
 
-        //        String username = request.getAuthDetail().getUserId();
-        AuthDetail authDetail = new AuthDetail();
+        AuthSessionResponse.CustomAuthDetail authDetail =
+                AuthSessionResponse.CustomAuthDetail.buildCustomAuthDetail();
+        authDetail.setUsername("李明");
         authDetail.setUserId(request.getUserId());
+
         response.setOtherInfo("其他信息");
         response.setAuthDetail(authDetail);
-
         return response;
     }
 }
